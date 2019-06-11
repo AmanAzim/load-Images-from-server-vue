@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import { storeProducts, detailProduct } from '../data'
 import axios from 'axios'
-import router from '../router'
+import router from '../router';
+import logo from '../logo.svg';
 
 Vue.use(Vuex)
 
@@ -90,7 +91,8 @@ export default new Vuex.Store({
         });
         commit('setProducts', tempProducts);
       */
-      // axios.put('https://e-handy-store.firebaseio.com/storeWatches.json', storeProducts);
+
+       //axios.put('https://e-handy-store.firebaseio.com/storeWatches.json', storeProducts);
       axios.get('https://e-handy-store.firebaseio.com/storeWatches.json')
         .then(res => {
           tempProducts = res.data

@@ -3,7 +3,7 @@
         <div class="card">
 
             <div class="img-container py-5" v-on:click="handelDetail(product.id)">
-                <router-link to="/details"><img v-bind:src="product.img" alt="product" class="card-img-top"/></router-link>
+                <router-link to="/details"><img v-bind:src="product.imgUrl" alt="product" class="card-img-top"/></router-link>
 
                 <button class="cart-btn" v-bind:disabled="product.inCart" v-on:click="addToCart(product.id); openModal(product.id)">
                     <p class="mb-0" v-if="product.inCart">In Cart</p>
@@ -15,7 +15,6 @@
                 <p class="align-self-center mb-0">{{product.title}}</p>
                 <h5 class="text-vue mb-0"><span class="mr-1">€</span>{{product.price}}</h5>
             </div>
-
         </div>
     </div>
 </template>
